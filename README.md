@@ -1,2 +1,4 @@
-# React-Basic-Project
-Contains All my Basic React Projects
+# React-Basics
+## What is React ?
+- React is a javascript framework/library
+- In react a component = user interface
