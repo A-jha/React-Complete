@@ -107,7 +107,7 @@ npx create-react-app <app-name>
 
 ## Folder Structure
 
-![Test Image 1](tutorial/React-complete.png)
+![Test Image 1](React-complete.png)
 
 ## First component
 
