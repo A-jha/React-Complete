@@ -210,3 +210,47 @@ var nav = React.createElement(
 ```
 
 JSX provides a concise and familiar syntax for defining a tree structure with attributes that does not require learning a templating language or leaving JavaScript.
+
+## Nested components
+
+Nested components in React.js help you create more complex view element structures.
+
+Example:
+
+- A react fuctional component returns a paragraph.
+
+```Javascript
+//explicit return
+const About = () => {
+  return <p>Welcome to react tutorail</p>;
+};
+```
+
+- A react component using above component inside it.
+
+```javascript
+// implicit return
+const Person = () => (
+  <h2>
+    Hello
+    <About />
+  </h2>
+);
+```
+
+- This is the main component which is going to render.
+
+```Javascript
+function Greeting() {
+  return (
+    <div>
+      <Person />
+      <About />
+    </div>
+  );
+}
+```
+
+## React Devloper Tool
+
+![React dev tool](Images/react-dev-tool.png)
