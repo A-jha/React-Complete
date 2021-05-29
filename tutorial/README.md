@@ -107,7 +107,7 @@ npx create-react-app <app-name>
 
 ## Folder Structure
 
-![Test Image 1](React-complete.png)
+![Test Image 1](./Images/React-complete.png)
 
 ## First component
 
@@ -253,4 +253,4 @@ function Greeting() {
 
 ## React Devloper Tool
 
-![React dev tool](Images/react-dev-tool.png)
+![React dev tool](./Images/react-dev-tool.png)
