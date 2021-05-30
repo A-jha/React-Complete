@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.mainPage {
+  text-align: center;
+  background: rgb(240, 191, 191);
+}
+.heading {
+  font-size: 2rem;
+}
+.box {
+  height: 0.4rem;
+  background: chocolate;
+  width: 20%;
+  margin: auto;
+}
+.booklist {
+  display: grid;
+}
+@media screen and (min-width: 900px) {
+  .booklist {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .booklist {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.book {
+  background: white;
+  margin: 1rem 8rem;
+  border-radius: 2rem;
+  box-shadow: 0.2rem 0.2rem black inset;
+  min-width: 300px;
+}

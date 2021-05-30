@@ -254,3 +254,137 @@ function Greeting() {
 ## React Devloper Tool
 
 ![React dev tool](./Images/react-dev-tool.png)
+
+## Adding CSS to React app
+
+- Import css with file path .
+
+```javascript
+import "./index.css";
+```
+
+- Another way is to add inline css
+
+```JSX
+const Author = ()=>{
+ <h4 style={{color:"#345678"}}>
+}
+```
+
+## Props
+
+- Props are arguments passed into React components.
+
+- Props are passed to components via HTML attributes.
+
+```javascript
+function Greeting() {
+  return (
+    <main className="mainPage">
+      <Heading />
+      <Box />
+      <div className="booklist">
+        <Book
+          title="first"
+          price={20}
+          img="https://source.unsplash.com/weekly?water"
+        />
+};
+```
+
+- one way using probs as base
+
+```javascript
+const Book = (props) => {
+  const img = props.img;
+  const title = props.title;
+  const price = props.price;
+  return (
+    <div className="book">
+      <Image img={img} />
+      <Title title={title} />
+      <Price price={price} />
+    </div>
+  );
+};
+```
+
+- second way using (set using object)
+
+```javascript
+const Book = (props) => {
+  const { img, title, price } = props;
+  return (
+    <div className="book">
+      <Image img={img} />
+      <Title title={title} />
+      <Price price={price} />
+    </div>
+  );
+};
+```
+
+**Read object structuring in js**
+
+- Third way
+
+```javascript
+const Book = ({ img, title, price }) => {
+  return (
+    <div className="book">
+      <Image img={img} />
+      <Title title={title} />
+      <Price price={price} />
+    </div>
+  );
+};
+```
+
+```javascript
+const Image = (props) => {
+  return <img className="img" src={props.img} alt="Unsplash random img" />;
+};
+```
+
+```javascript
+const Title = (props) => {
+  return <article className="title">{props.title}</article>;
+};
+```
+
+```javascript
+const Price = (props) => {
+  return (
+    <p className="dollar">
+      $<span className="price">{props.price}</span>
+    </p>
+  );
+};
+```
+
+## children probs
+
+In React, a component can have one, many, or no children.
+
+- paragraph is a children probs.
+
+```javascript
+<Book title="first" price={20} img="https://source.unsplash.com/weekly?water">
+  <p> In React, a component can have one, many, or no children. </p>
+</Book>
+```
+
+- children name is filxe you cant change to anything else.
+
+```javascript
+const Book = (props) => {
+  const { img, title, price } = props;
+  return (
+    <div className="book">
+      <Image img={img} />
+      <Title title={title} />
+      <Price price={price} />
+    </div>
+  );
+};
+```
