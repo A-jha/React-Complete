@@ -388,3 +388,77 @@ const Book = (props) => {
   );
 };
 ```
+
+## Rendering an array
+
+- Convert names into jsx
+
+```javascript
+const names = ["Avinash", "Arpita", "sam"];
+const newName = names.map((name) => {
+  return <h1>{name}</h1>;
+});
+```
+
+- Inside React Component
+
+```javascript
+<section>{newName}</section>
+```
+
+## Rendering an Array with objects
+
+- Usimng map function we can render.
+
+```Javascript
+<section>
+      {books.map((book) => {
+        const { title, price, img } = book;
+        return (
+          <div>
+            <h3>{title}</h3>
+            <h6>{price}</h6>
+          </div>
+        );
+      })}
+</section>
+```
+
+- we can pass props like this
+
+```javascript
+<section>
+  {books.map((book) => {
+    const { title, price, img } = book;
+    return <Book img={img} price={price} title={title} />;
+  })}
+</section>
+```
+
+- Intead of passing one by one we can pass a book prop
+- By doing that we have to change props to props.book
+
+```javascript
+<div className="booklist">
+  {books.map((book) => {
+    return <Book key={book.id} book={book}></Book>;
+  })}
+</div>
+```
+
+- Key is added manually because react always keep track of the component and hence a warning is always there if you are not providing key.
+
+- We can use spread operator such that we don't need to access props.book
+- **{...book}**
+
+```javascript
+<div className="booklist">
+  {books.map((book) => {
+    return <Book key={book.id} {...book}></Book>;
+  })}
+</div>
+```
+
+# User Events
+
+## State in React

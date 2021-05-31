@@ -1,22 +1,19 @@
 import React from "react";
 import "./book.css";
-//---Variable-----
-// let img = "https://source.unsplash.com/daily";
-// const tiltle = "This the best view";
-// const price = 10;
 
 const Book = (props) => {
-  // const img = props.img;
-  // const title = props.title;
-  // const price = props.price;
   const { img, title, price, children } = props;
   return (
-    <div className="book">
-      <Image img={img} />
-      <Title title={title} />
-      <Price price={price} />
-      {children}
-    </div>
+    <>
+      <Heading />
+      <Box />
+      <div className="book">
+        <Image img={img} />
+        <Title title={title} />
+        <Price price={price} />
+        {children}
+      </div>
+    </>
   );
 };
 
@@ -34,5 +31,11 @@ const Price = (props) => {
       $<span className="price">{props.price}</span>
     </p>
   );
+};
+const Heading = () => {
+  return <div className="heading">List of Places</div>;
+};
+const Box = () => {
+  return <div className="box"></div>;
 };
 export default Book;
