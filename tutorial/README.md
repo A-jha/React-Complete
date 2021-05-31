@@ -459,6 +459,45 @@ const newName = names.map((name) => {
 </div>
 ```
 
-# User Events
+# React Events
 
-## State in React
+## [SyntheticEvent](https://reactjs.org/docs/events.html)
+
+### Onclick event
+
+- we can set a reference to a function
+
+```javascript
+const Book = (props) => {
+  //attributes , event handler
+  const clickHandler = () => {
+    alert(` Hello World `);
+  };
+  return (
+    <>
+      <button type="button" onClick={clickHandler}>
+        Alert
+      </button>
+    </>
+  );
+};
+```
+
+- Instead of referencing we can write inline function too
+
+```javascript
+const Book = (props) => {
+  return (
+    <>
+      <button
+        type="button"
+        onClick={() => {
+          alert("inline fuction");
+        }}
+      >
+        Alert
+      </button>
+    </>
+  );
+};
+```

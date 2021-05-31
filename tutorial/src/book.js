@@ -11,6 +11,15 @@ const Book = (props) => {
         <Image img={img} />
         <Title title={title} />
         <Price price={price} />
+        <button
+          type="button"
+          onClick={() => {
+            alert("inline fuction");
+          }}
+        >
+          Change Background
+        </button>
+        <button type="button">Complex Btn</button>
         {children}
       </div>
     </>
