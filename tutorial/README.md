@@ -501,3 +501,29 @@ const Book = (props) => {
   );
 };
 ```
+
+## Named export and default export
+
+- Named export is fixed by name we can not change the name.
+
+```Javascript
+export book
+```
+
+```Javascript
+import { books } from "../src/books";
+```
+
+- Default export has some benifits it allows us to chnage the name until file path is same.
+
+```Javascript
+export default Book;
+```
+
+```javascript
+import Book from "./book";
+```
+
+## Netlify and React Build
+
+# Step 1:

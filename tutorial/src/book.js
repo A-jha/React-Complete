@@ -2,7 +2,10 @@ import React from "react";
 import "./book.css";
 
 const Book = (props) => {
-  const { img, title, price, children } = props;
+  const complexExample = (title) => {
+    console.log(title);
+  };
+  const { img, title, price } = props;
   return (
     <>
       <Heading />
@@ -19,8 +22,9 @@ const Book = (props) => {
         >
           Change Background
         </button>
-        <button type="button">Complex Btn</button>
-        {children}
+        <button type="button" onClick={() => complexExample(title)}>
+          Complex Btn
+        </button>
       </div>
     </>
   );
