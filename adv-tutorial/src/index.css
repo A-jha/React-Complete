@@ -318,3 +318,21 @@ p {
   text-transform: capitalize;
   cursor: pointer;
 }
+i {
+  font-size: 2rem;
+  color: blue;
+}
+.saperatorplus {
+  margin: 2rem auto;
+  height: 0.2rem;
+  background: black;
+  width: 30rem;
+  transform: rotate(3deg);
+}
+.saperatorminus {
+  margin: 2rem auto;
+  height: 0.2rem;
+  background: black;
+  width: 30rem;
+  transform: rotate(-3deg);
+}

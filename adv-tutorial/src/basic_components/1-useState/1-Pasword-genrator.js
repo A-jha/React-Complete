@@ -75,9 +75,16 @@ const PaswordGenerator = () => {
   const randomPasword = () => {
     setText(str);
   };
+  const copyFuction = () => {
+    console.log(text.toString());
+  };
   return (
     <div>
-      <h2>{text}</h2>
+      <div className="mydiv">
+        <h2 id="textarea">{text}</h2>
+        <span onClick={copyFuction}>copy</span>
+      </div>
+
       <button className="btn" onClick={randomPasword}>
         Random Password
       </button>

@@ -1,10 +1,10 @@
 import React from "react";
-import PaswordGenerator from "../src/basic_components/1-Pasword-genrator";
-import PasswordGenerator from "../src/basic_components/1-Pasword-genrator";
+import UseStateObject from "./basic_components/1-useState/5-Timer";
+
 function App() {
   return (
     <div className="container">
-      <PaswordGenerator />
+      <UseStateObject />
     </div>
   );
 }
