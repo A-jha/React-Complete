@@ -1,10 +1,10 @@
 import React from "react";
-import UseStateObject from "./basic_components/1-useState/5-Timer";
+import FetchData from "../src/basics/2-UseEffect/2-fetch_data";
 
 function App() {
   return (
     <div className="container">
-      <UseStateObject />
+      <FetchData />
     </div>
   );
 }
