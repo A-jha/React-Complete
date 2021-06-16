@@ -1,10 +1,10 @@
 import React from "react";
-import FetchData from "../src/basics/2-UseEffect/2-fetch_data";
+import CondRender from "./basics/3-Conditional_Rendering/1_Multiple_Return";
 
 function App() {
   return (
     <div className="container">
-      <FetchData />
+      <CondRender />
     </div>
   );
 }
