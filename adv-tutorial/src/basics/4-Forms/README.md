@@ -35,3 +35,9 @@ setPeople((people) => {
   return [...people, person];
 });
 ```
+
+## 2-multiple inputs
+
+- instead of using multiple use state set one useState with object
+
+### Dynamic property of js

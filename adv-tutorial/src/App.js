@@ -1,10 +1,10 @@
 import React from "react";
-import ControlledForm from "./basics/4-Forms/1-Controlled-input";
+import ControlledInputs from "./basics/4-Forms/2-multiple-Input";
 
 function App() {
   return (
     <div className="container">
-      <ControlledForm />
+      <ControlledInputs />
     </div>
   );
 }
