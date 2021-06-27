@@ -1,62 +1,58 @@
 import React, { useState } from "react";
 
 const ControlledInput = () => {
-  //setting state values
-  const [name, setName] = useState("");
+  const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
-  //to set people dynamically
   const [people, setPeople] = useState([]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    //istead of using old approach we can do
-    //console.log(document.getElementById("email").value);
-    //we can use states
-    //we are only going to value if both value is true
-
-    if (name && email) {
-      //const person = { name: name, email: email };
-      const person = { id: new Date().getTime().toString, name, email };
-      setPeople((people) => {
+    if (firstName && email) {
+      let person = {
+        id: new Date().getTime().toString(),
+        firstName: firstName,
+        email: email,
+      };
+      setPeople(() => {
         return [...people, person];
       });
-      setName("");
       setEmail("");
-      console.log(people);
+      setFirstName("");
+    } else {
+      console.log("empty values");
     }
   };
-
   return (
     <>
-      <h2>Forms</h2>
       <article>
         <form className="form" onSubmit={handleSubmit}>
           <div className="form-control">
-            <label htmlFor="firstName">Name : </label>
+            <label htmlFor="firstName">Name :</label>
             <input
               type="text"
-              id="firstName"
               name="firstName"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
+              id="firstName"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+            ></input>
           </div>
           <div className="form-control">
             <label htmlFor="email">Email : </label>
             <input
               type="text"
-              id="email"
               name="email"
+              id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-            />
+            ></input>
           </div>
-          <button type="submit">Add Person</button>
+          <button type="submit">add person</button>
         </form>
-        {people.map((person) => {
-          const { id, name, email } = person;
+        {people.map((person, index) => {
+          const { id, firstName, email } = person;
           return (
             <div className="item" key={id}>
-              <h4>{name}</h4>
+              <h4>{firstName}</h4>
               <p>{email}</p>
             </div>
           );
