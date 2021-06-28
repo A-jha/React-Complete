@@ -41,3 +41,11 @@ setPeople((people) => {
 - instead of using multiple use state set one useState with object
 
 ### Dynamic property of js
+
+## [Use Ref](https://dmitripavlutin.com/react-useref-guide/)
+
+- Using uncontrolled input in forms
+- most popular use of use ref is to get refereb=nce of DOM element.
+- it preserves value
+- does not trigger rerender
+- target DOM Nodes/Elements

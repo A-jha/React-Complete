@@ -62,7 +62,7 @@ const ControlledInputs = () => {
           <div className="form-control">
             <label>Age : </label>
             <input
-              type="text"
+              type="number"
               name="age"
               value={user.age}
               id="age"
@@ -75,7 +75,7 @@ const ControlledInputs = () => {
               type="email"
               name="email"
               value={user.email}
-              id="firstName"
+              id="email"
               onChange={handleChange}
             ></input>
           </div>
