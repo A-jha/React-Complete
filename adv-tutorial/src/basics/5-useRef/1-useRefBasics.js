@@ -1,13 +1,17 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 
 const UseRefBasics = () => {
   const refContainer = useRef(null);
+  const divContainer = useRef(null);
+  const [divContent, setDivContent] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(refContainer.current.value);
+    refContainer.current.value = "G";
   };
-  console.log(refContainer);
+  useEffect(() => {
+    refContainer.current.focus();
+  });
   return (
     <>
       <form className="form" onSubmit={handleSubmit}>
@@ -16,6 +20,7 @@ const UseRefBasics = () => {
           <button type="submit">Submit</button>
         </div>
       </form>
+      <div ref={divContainer}>Hello</div>
     </>
   );
 };
