@@ -1,5 +1,5 @@
 import React from "react";
-import UseRef from "./basics/5-useRef/1-useRefBasics";
+import UseRef from "./basics/6-useReducer";
 
 function App() {
   return (

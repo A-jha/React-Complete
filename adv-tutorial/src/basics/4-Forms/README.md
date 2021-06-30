@@ -49,3 +49,5 @@ setPeople((people) => {
 - it preserves value
 - does not trigger rerender
 - target DOM Nodes/Elements
+
+# UseReducer
