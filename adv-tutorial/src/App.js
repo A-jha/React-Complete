@@ -1,5 +1,5 @@
 import React from "react";
-import UseRef from "./basics/6-useReducer";
+import UseRef from "./basics/7-Prop-Drilling/prop-drilling";
 
 function App() {
   return (
