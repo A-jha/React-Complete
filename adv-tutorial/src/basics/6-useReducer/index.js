@@ -1,22 +1,12 @@
 import React, { useState, useReducer } from "react";
 import Modal from "./Modal";
 import data from "../../data";
-const reducer = (state, action) => {
-  const newItems = [...state.people, action.payload];
-  if (action.type === "ADD_ITEM") {
-    return {
-      ...state,
-      people: newItems,
-      isModalOpen: true,
-      modalContent: "items added",
-    };
-  }
-  return new Error("no matching action found");
-};
+// reducer function
+import { reducer } from "./reducer";
 const defaultState = {
   people: [],
   isModalOpen: false,
-  modalContent: "hello G",
+  modalContent: "",
 };
 const Index = () => {
   const [name, setName] = useState("");
@@ -24,16 +14,22 @@ const Index = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name) {
-      const newName = { id: new Date().getTime().toString(), name };
-      dispatch({ type: "ADD_ITEM", payload: newName });
+      const newItem = { id: new Date().getTime().toString(), name };
+      dispatch({ type: "ADD_ITEM", payload: newItem });
+      setName("");
     } else {
-      state.isModalOpen = true;
+      dispatch({ type: "NO_VALUE" });
     }
+  };
+  const closeModal = () => {
+    dispatch({ type: "CLOSE_MODAL" });
   };
   return (
     <>
-      {state.isModalOpen && <Modal modalContent={state.modalContent} />}
-      <form className="form" onSubmit={handleSubmit}>
+      {state.isModalOpen && (
+        <Modal closeModal={closeModal} modalContent={state.modalContent} />
+      )}
+      <form onSubmit={handleSubmit} className="form">
         <div>
           <input
             type="text"
@@ -41,16 +37,24 @@ const Index = () => {
             onChange={(e) => setName(e.target.value)}
           />
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit">add </button>
       </form>
       {state.people.map((person) => {
         return (
-          <div key={person.id}>
+          <div key={person.id} className="item">
             <h4>{person.name}</h4>
+            <button
+              onClick={() =>
+                dispatch({ type: "REMOVE_ITEM", payload: person.id })
+              }
+            >
+              remove
+            </button>
           </div>
         );
       })}
     </>
   );
 };
+
 export default Index;
