@@ -1,0 +1,27 @@
+[
+    {
+        "id":1,
+        "question":"Name the library on which thsi quiz app is build",
+        "options":[{"React":true},{"Flutter":false},{"Django":false},{"Angular":false}]
+    },
+    {
+        "id":2,
+        "question":"Native app can be developed using which framework ?",
+        "options":[{"React":false},{"Flutter":true},{"Django":false},{"Angular":false}]
+    },
+    {
+        "id":3,
+        "question":"Gatsby is a framework based on which library ?",
+        "options":[{"React":true},{"Flutter":false},{"Django":false},{"Angular":false}]
+    },
+    {
+        "id":4,
+        "question":"Which of these framework has a very famous term Widget ?",
+        "options":[{"React":false},{"Flutter":true},{"Django":false},{"Angular":false}]
+    },
+    {
+        "id":5,
+        "question":"ascii value of 'a' is __",
+        "options":[{"65":true},{"66":false},{"67":false},{"68":false}]
+    }
+]
