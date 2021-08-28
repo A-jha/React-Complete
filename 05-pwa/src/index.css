@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.main-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url(./bg.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.search {
+  padding: 1rem;
+  border-radius: 1.5rem;
+  width: 40%;
+  font-size: 1.3rem;
+  outline: none;
+  border: none;
+  box-shadow: inset 2px 2px 2px 2px #111;
+}
+
+.search-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1.2rem;
+  border: none;
+  background: rgb(7, 150, 233);
+  box-shadow: 1px 1px 1px 1px black;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.city-card {
+  margin-top: 2rem;
+  background: linear-gradient(to top right, rgb(46, 168, 238), #fff);
+  min-width: 300px;
+  text-align: center;
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+  box-shadow: 1px 2px 2p 2px black;
+}
+.location {
+  margin: 10px;
+  background: orange;
+  padding: 5px 10px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+.city-temp {
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.desc {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+}
