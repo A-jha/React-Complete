@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,500");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  background-image: url(./bg.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+}
+#quote-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  background: #444;
+  min-height: 300px;
+
+  max-width: 700px;
+  margin: 1rem;
+  box-shadow: inset 2px 2px 30px red;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+a {
+  user-select: none;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+}
+#new-quote {
+  margin-top: 1rem;
+  margin-right: 3rem;
+  padding: 0.6rem;
+  border-radius: 5px;
+  background: blueviolet;
+}
+#tweet-quote {
+  margin-top: 1rem;
+  margin-right: 3rem;
+  padding: 0.6rem;
+  background: inherit;
+  font-size: 2rem;
+  border-radius: 5px;
+  color: rgb(4, 207, 214);
+}
+#whatsApp {
+  margin-top: 1rem;
+  margin-right: 3rem;
+  padding: 0.6rem;
+  font-size: 2rem;
+  background: inherit;
+  border-radius: 5px;
+  color: greenyellow;
+}
+#text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem;
+  text-align: center;
+}
+#author {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.title {
+  margin: 0 auto;
+  text-align: center;
+  font-style: italic;
+  font-size: 2.5rem;
+}
+@media screen and (max-width: 580px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  body {
+    font-size: 1.2rem;
+  }
+}
+h4 {
+  text-align: center;
+}

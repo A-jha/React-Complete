@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #aaa, rgb(118, 201, 226));
+  font-family: Ubuntu;
+  line-height: 10px;
+}
+.main-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+code {
+  padding: 0.5rem;
+  display: block;
+  border: none !important;
+  background: #444 !important;
+  font-size: 1.2rem !important;
+  border: 2px solid black;
+  color: rgb(164, 198, 204);
+  overflow-x: auto;
+  margin: 0.5rem 0;
+  box-shadow: inset 1px 1px 1px 2px white;
+}
+i {
+  padding: 0.5rem 0.6rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+i:hover {
+  color: blueviolet;
+}
+.fa-whatsapp {
+  color: green;
+}
+.fa-print {
+  color: rgb(255, 60, 0);
+}
+/*---------Editor Container---------*/
+.editor-container {
+  margin-top: 2rem;
+}
+.editorHeader {
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+}
+.editorTitle {
+  flex-grow: 1;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 0 1rem;
+  text-transform: capitalize;
+}
+textarea {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  min-width: 300px;
+}
+#editor {
+  width: 70vw;
+  height: 30vh;
+}
+.hidden {
+  display: none;
+}
+
+/***-------Preview Container-----------*/
+
+.preview-container {
+  background: linear-gradient(to right, #aaa, rgb(118, 201, 226));
+  width: 80%;
+  margin: 2rem;
+  border: 2px solid white;
+  letter-spacing: 1px;
+  box-shadow: 1px 3px 5px black;
+}
+.preview-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.previewHeader {
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+.previewTitle {
+  flex-grow: 1;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 0 1rem;
+}
+.preview {
+  padding: 1rem;
+  line-height: 40px;
+}
+@media screen and (max-width: 600px) {
+  textarea {
+    font-size: 1rem;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
