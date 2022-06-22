@@ -5,6 +5,7 @@ import Hooks from "./components/Hooks";
 import Layout from "./components/Layout";
 import Error from "./components/Error";
 import CounterContextProvider from "./context/CounterContext";
+import MyCounter from "./components/MyCounter";
 export default function App() {
   return (
     <BrowserRouter>
@@ -14,6 +15,7 @@ export default function App() {
             {" "}
             <Route index element={<Home />} />
             <Route path="hooks" element={<Hooks />} />
+            <Route path="counter" element={<MyCounter />} />
             <Route path="*" element={<Error />} />
           </Routes>
         </Layout>

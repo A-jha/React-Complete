@@ -1,12 +1,6 @@
 import React from "react";
-import MyCounter from "./MyCounter";
-
 const Home = () => {
-  return (
-    <div>
-      <MyCounter />
-    </div>
-  );
+  return <div>Home</div>;
 };
 
 export default Home;

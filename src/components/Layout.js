@@ -6,7 +6,10 @@ export default function Layout({ children }) {
       <header>
         <h1>header</h1>
         <Link to={"/hooks"} placeholder="sad">
-          Fuck
+          Hooks
+        </Link>
+        <Link to={"/counter"} placeholder="sad">
+          useContext
         </Link>
       </header>
       <main>{children}</main>
